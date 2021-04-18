@@ -5,16 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.octopusthu.javaengineering</groupId>
-    <artifactId>javaengineering-root</artifactId>
+    <artifactId>hello-world</artifactId>
     <version>1.0.0</version>
-    <packaging>pom</packaging>
-    <description>Java 工程实践</description>
-
-    <modules>
-        <module>hello-world</module>
-    </modules>
-
-    <build>
-    </build>
+    <packaging>jar</packaging>
+    <description>The Hello World project.</description>
 
 </project>
