@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.octopusthu.javaengineering</groupId>
-    <artifactId>javaengineering-root</artifactId>
+    <artifactId>java-engineering-root</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
     <description>Java 工程实践</description>
