@@ -8,6 +8,7 @@
     <artifactId>java-engineering-parent</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
+    <description>Java 工程实践课程使用的父工程，其他所有子工程应该继承此工程。</description>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>

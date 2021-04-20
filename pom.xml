@@ -11,7 +11,9 @@
     <description>Java 工程实践</description>
 
     <modules>
+        <module>java-engineering-parent</module>
         <module>hello-world</module>
+        <module>code-samples</module>
     </modules>
 
     <build>
