@@ -30,7 +30,7 @@
   - .gitignore
   - 使用 Git 客户端工具 (Visual Studio Code)
 
-- Maven
+- Maven (延后到第10周)
   - Maven 的下载、安装与配置
   - Why Maven
   - POM
@@ -57,6 +57,6 @@
 
 1. 使用 "git clone" 命令将课程代码仓库克隆到本地，然后使用 "git checkout" 命令从默认分支 "master" 检出新分支 "user/xxx" 。
 
-1. 下载、安装并配置 Maven ，成功运行 "mvn -v" 命令。
+1. 下载、安装并配置 Maven ，成功运行 "mvn -v" 命令。 (延后到第10周)
 
-1. 在 IntelliJ IDEA 中将课程代码仓库中的 "java-engineering-root" 项目以 Maven Module 方式导入，并执行 Maven Lifecycle 中的 "Install" 将项目安装到本地 Maven 仓库中。
+1. 在 IntelliJ IDEA 中将课程代码仓库中的 "java-engineering-root" 项目以 Maven Module 方式导入，并执行 Maven Lifecycle 中的 "Install" 将项目安装到本地 Maven 仓库中。 (延后到第10周)
