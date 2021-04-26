@@ -4,18 +4,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.5</version>
+    </parent>
+
     <groupId>com.octopusthu.javaengineering</groupId>
     <artifactId>java-engineering-parent</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <description>Java 工程实践课程使用的父工程，其他所有子工程应该继承此工程。</description>
-
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.4.5</version>
-        <relativePath/>
-    </parent>
 
     <properties>
         <java.version>11</java.version>

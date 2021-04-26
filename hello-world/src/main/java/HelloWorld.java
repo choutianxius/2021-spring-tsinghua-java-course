@@ -8,23 +8,30 @@ public class HelloWorld {
 
     public static void main(String[] args) {
         System.out.println("Hello, world!");
-        bagRemoval();
+        fruitsInBag();
     }
 
-    private static void bagRemoval() {
+    private static void fruitsInBag() {
         Bag<String> bag = new HashBag<>();
+        System.out.println("Initialize a new bag");
 
-        // add 6 copies of "ITEM"
-        bag.add("ITEM", 6);
+        bag.add("APPLE", 6);
+        System.out.println("Add 6 apples to the bag");
+        bag.add("PEAR", 5);
+        System.out.println("Add 5 pears to the bag");
 
-        // removes 2 copies of "ITEM"
-        bag.remove("ITEM", 2);
+        System.out.println("Now the bag has "
+            + bag.getCount("APPLE") + " apples and "
+            + bag.getCount("PEAR") + " pears in it.");
 
-        int itemsLeft = bag.getCount("ITEM");
+        bag.remove("APPLE", 2);
+        System.out.println("Remove 2 apples from the bag");
+        bag.add("PEAR", 2);
+        System.out.println("Add 2 pears to the bag");
 
-        // returns 4, the number of copies in the bag (6 - 2)
-        System.out.println("Add 6 items to the bag and remove 2 from it will leave "
-            + itemsLeft + " items in the bag.");
+        System.out.println("Now the bag has "
+            + bag.getCount("APPLE") + " apples and "
+            + bag.getCount("PEAR") + " pears in it.");
     }
 
 }

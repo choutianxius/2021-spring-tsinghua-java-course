@@ -3,7 +3,6 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>com.octopusthu.javaengineering</groupId>
     <artifactId>java-engineering-root</artifactId>
     <version>1.0.0</version>
@@ -14,6 +13,7 @@
         <module>java-engineering-parent</module>
         <module>hello-world</module>
         <module>code-samples</module>
+        <module>tournament</module>
     </modules>
 
     <build>
