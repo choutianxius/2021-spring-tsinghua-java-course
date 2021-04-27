@@ -16,13 +16,6 @@
 
     <dependencies>
 
-        <!-- must-have dependencies -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
         <!-- spring boot tools -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -67,6 +60,11 @@
         <!--        </dependency>-->
 
         <!-- 工具库 -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
