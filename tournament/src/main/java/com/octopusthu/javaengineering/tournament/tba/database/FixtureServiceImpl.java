@@ -1,7 +1,6 @@
-package com.octopusthu.javaengineering.tournament.database;
+package com.octopusthu.javaengineering.tournament.tba.database;
 
-import com.octopusthu.javaengineering.tournament.fixture.Fixture;
-import com.octopusthu.javaengineering.tournament.fixture.FixtureService;
+import com.octopusthu.javaengineering.tournament.core.*;
 import org.springframework.data.domain.Sort;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -65,34 +64,34 @@ public class FixtureServiceImpl implements FixtureService {
         return entity;
     }
 
-    protected FixtureEventEntity convert(Fixture.FixtureEvent event, FixtureEntity fixtureEntity) {
+    protected FixtureEventEntity convert(FixtureEvent event, FixtureEntity fixtureEntity) {
         return new FixtureEventEntity(event.getId(), fixtureEntity, event.getEvent(), event.getEventMinuteOffset(), convert(event.getTeam()), convert(event.getPlayer()));
     }
 
-    protected TeamEntity convert(Fixture.Team team) {
+    protected TeamEntity convert(Team team) {
         return new TeamEntity(team.getId(), team.getName());
     }
 
-    protected PlayerEntity convert(Fixture.Player player) {
+    protected PlayerEntity convert(Player player) {
         return new PlayerEntity(player.getId(), player.getName());
     }
 
     protected Fixture convert(FixtureEntity entity) {
-        List<Fixture.FixtureEvent> events = new ArrayList<>(entity.getEvents().size());
+        List<FixtureEvent> events = new ArrayList<>(entity.getEvents().size());
         entity.getEvents().forEach(e -> events.add(convert(e)));
         return new Fixture(entity.getSeq(), entity.getFixtureDate(), entity.getKickoffTime(), entity.getField(), convert(entity.getHomeTeam()), convert(entity.getAwayTeam()), entity.getHomeTeamScore(), entity.getAwayTeamScore(), events);
     }
 
-    protected Fixture.FixtureEvent convert(FixtureEventEntity entity) {
-        return new Fixture.FixtureEvent(entity.getSeq(), entity.getEvent(), entity.getEventMinuteOffset(), convert(entity.getTeam()), convert(entity.getPlayer()));
+    protected FixtureEvent convert(FixtureEventEntity entity) {
+        return new FixtureEvent(entity.getSeq(), entity.getEvent(), entity.getEventMinuteOffset(), convert(entity.getTeam()), convert(entity.getPlayer()));
     }
 
-    protected Fixture.Team convert(TeamEntity entity) {
-        return new Fixture.Team(entity.getSeq(), entity.getName());
+    protected Team convert(TeamEntity entity) {
+        return new Team(entity.getSeq(), entity.getName());
     }
 
-    protected Fixture.Player convert(PlayerEntity entity) {
-        return new Fixture.Player(entity.getSeq(), entity.getName());
+    protected Player convert(PlayerEntity entity) {
+        return new Player(entity.getSeq(), entity.getName());
     }
 
     protected List<Fixture> convert(List<FixtureEntity> entities) {

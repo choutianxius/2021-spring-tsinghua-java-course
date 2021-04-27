@@ -1,4 +1,4 @@
-package com.octopusthu.javaengineering.tournament.database;
+package com.octopusthu.javaengineering.tournament.tba.database;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

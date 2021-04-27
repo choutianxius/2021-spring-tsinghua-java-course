@@ -6,7 +6,7 @@ CREATE TABLE `team`
 (
     `seq`  int(9) NOT NULL COMMENT '球队ID',
     `name` varchar(50) NOT NULL COMMENT '球队名称',
-    PRIMARY KEY (`seq`) USING BTREE
+    PRIMARY KEY (`seq`)
 ) COMMENT = '球队';
 
 -- ----------------------------
@@ -50,7 +50,7 @@ CREATE TABLE `fixture_event`
     `event_minute_offset` int(3) COMMENT '事件发生时间，按比赛开始后第几分钟记录。比如：比赛第30分钟发生的事件，本列存储整数30。',
     `team`                int(9) COMMENT '事件涉及的球队，其含义随事件类型的不同而不同。',
     `player`              int(9) COMMENT '事件涉及的球员，其含义随事件类型的不同而不同。',
-    PRIMARY KEY (`seq`) USING BTREE,
+    PRIMARY KEY (`seq`),
     INDEX                 `fk__fixture_event__fixture` (`fixture`) USING BTREE,
     INDEX                 `fk__team` (`team`) USING BTREE,
     INDEX                 `fk__player` (`player`) USING BTREE,

@@ -11,6 +11,7 @@
     </parent>
 
     <artifactId>code-samples</artifactId>
+    <version>1.0.0</version>
     <description>代码示例</description>
 
 </project>

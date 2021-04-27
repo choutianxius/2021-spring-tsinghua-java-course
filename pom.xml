@@ -16,7 +16,4 @@
         <module>tournament</module>
     </modules>
 
-    <build>
-    </build>
-
 </project>

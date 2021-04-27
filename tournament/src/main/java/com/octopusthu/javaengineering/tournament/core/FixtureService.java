@@ -1,4 +1,4 @@
-package com.octopusthu.javaengineering.tournament.fixture;
+package com.octopusthu.javaengineering.tournament.core;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
-package com.octopusthu.javaengineering.tournament.web;
+package com.octopusthu.javaengineering.tournament.tba.web;
 
-import com.octopusthu.javaengineering.tournament.fixture.Fixture;
-import com.octopusthu.javaengineering.tournament.fixture.FixtureService;
+import com.octopusthu.javaengineering.tournament.core.Fixture;
+import com.octopusthu.javaengineering.tournament.core.FixtureService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

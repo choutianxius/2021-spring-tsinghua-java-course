@@ -12,7 +12,6 @@
 
     <artifactId>hello-world</artifactId>
     <version>1.0.0</version>
-    <packaging>jar</packaging>
     <description>The Hello World project.</description>
 
     <dependencies>
