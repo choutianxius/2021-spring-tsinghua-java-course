@@ -1,5 +1,6 @@
 package com.octopusthu.javaengineering.tournament.tba.core;
 
+import com.octopusthu.javaengineering.tournament.core.Player;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 

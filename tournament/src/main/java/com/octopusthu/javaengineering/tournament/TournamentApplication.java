@@ -1,6 +1,6 @@
 package com.octopusthu.javaengineering.tournament;
 
-import com.octopusthu.javaengineering.tournament.tba.inmemory.InMemoryPlayerServiceImpl;
+import com.octopusthu.javaengineering.tournament.inmemory.InMemoryPlayerServiceImpl;
 import com.octopusthu.javaengineering.tournament.web.HelloWorldRestController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

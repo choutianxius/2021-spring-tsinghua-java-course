@@ -1,8 +1,8 @@
-package com.octopusthu.javaengineering.tournament.tba.inmemory;
+package com.octopusthu.javaengineering.tournament.inmemory;
 
-import com.octopusthu.javaengineering.tournament.tba.common.exception.DomainObjectException;
-import com.octopusthu.javaengineering.tournament.tba.core.Player;
-import com.octopusthu.javaengineering.tournament.tba.core.PlayerService;
+import com.octopusthu.javaengineering.tournament.common.exception.DomainObjectException;
+import com.octopusthu.javaengineering.tournament.core.Player;
+import com.octopusthu.javaengineering.tournament.core.PlayerService;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;

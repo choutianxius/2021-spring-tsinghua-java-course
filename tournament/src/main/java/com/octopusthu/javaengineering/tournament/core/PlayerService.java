@@ -1,6 +1,6 @@
-package com.octopusthu.javaengineering.tournament.tba.core;
+package com.octopusthu.javaengineering.tournament.core;
 
-import com.octopusthu.javaengineering.tournament.tba.common.exception.DomainObjectException;
+import com.octopusthu.javaengineering.tournament.common.exception.DomainObjectException;
 
 import java.util.List;
 

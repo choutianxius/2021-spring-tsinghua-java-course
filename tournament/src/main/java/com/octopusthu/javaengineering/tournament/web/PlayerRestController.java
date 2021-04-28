@@ -1,7 +1,7 @@
-package com.octopusthu.javaengineering.tournament.tba.web;
+package com.octopusthu.javaengineering.tournament.web;
 
-import com.octopusthu.javaengineering.tournament.tba.core.Player;
-import com.octopusthu.javaengineering.tournament.tba.core.PlayerService;
+import com.octopusthu.javaengineering.tournament.core.Player;
+import com.octopusthu.javaengineering.tournament.core.PlayerService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.octopusthu.javaengineering.tournament.tba.common.exception;
+package com.octopusthu.javaengineering.tournament.common.exception;
 
 /**
  * 对领域实体进行新增、修改、删除、查询等操作时发生的异常
