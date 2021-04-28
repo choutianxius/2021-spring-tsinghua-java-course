@@ -1,6 +1,6 @@
 package com.octopusthu.javaengineering.tournament.tba;
 
-import com.octopusthu.javaengineering.tournament.core.FixtureService;
+import com.octopusthu.javaengineering.tournament.tba.core.FixtureService;
 import com.octopusthu.javaengineering.tournament.tba.database.FixtureRepository;
 import com.octopusthu.javaengineering.tournament.tba.database.FixtureServiceImpl;
 import org.springframework.context.annotation.Bean;

@@ -1,5 +1,6 @@
 package com.octopusthu.javaengineering.tournament;
 
+import com.octopusthu.javaengineering.tournament.tba.inmemory.InMemoryPlayerServiceImpl;
 import com.octopusthu.javaengineering.tournament.web.HelloWorldRestController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,7 +16,10 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication(exclude = {
     DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class
 })
-@ComponentScan(basePackageClasses = {HelloWorldRestController.class})
+@ComponentScan(basePackageClasses = {
+    InMemoryPlayerServiceImpl.class,
+    HelloWorldRestController.class
+})
 public class TournamentApplication {
 
     public static void main(String[] args) {

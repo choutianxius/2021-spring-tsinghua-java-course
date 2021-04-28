@@ -1,6 +1,6 @@
 package com.octopusthu.javaengineering.tournament.tba.database;
 
-import com.octopusthu.javaengineering.tournament.core.*;
+import com.octopusthu.javaengineering.tournament.tba.core.*;
 import org.springframework.data.domain.Sort;
 import org.springframework.transaction.annotation.Transactional;
 

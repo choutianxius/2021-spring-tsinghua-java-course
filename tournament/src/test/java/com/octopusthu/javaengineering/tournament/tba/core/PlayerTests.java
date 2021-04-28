@@ -1,4 +1,4 @@
-package com.octopusthu.javaengineering.tournament.core;
+package com.octopusthu.javaengineering.tournament.tba.core;
 
 import org.junit.jupiter.api.Test;
 
