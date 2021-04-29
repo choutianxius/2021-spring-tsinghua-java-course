@@ -1,3 +1,5 @@
+package com.octopusthu.javaengineering.samples;
+
 import java.util.ArrayList;
 import java.util.List;
 

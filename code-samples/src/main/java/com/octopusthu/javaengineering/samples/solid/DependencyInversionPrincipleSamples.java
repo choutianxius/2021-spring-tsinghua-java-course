@@ -70,7 +70,7 @@ public class DependencyInversionPrincipleSamples {
         FlexiblePhone phone = new FlexiblePhone(cableCharger);
         phone.charge();
 
-        // Charge with CableCharger
+        // Charge with WirelessCharger
         Charger wirelessCharger = new WirelessCharger();
         phone.setCharger(wirelessCharger);
         phone.charge();

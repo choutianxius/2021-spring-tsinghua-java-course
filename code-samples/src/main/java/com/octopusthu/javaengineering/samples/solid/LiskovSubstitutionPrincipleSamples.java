@@ -87,8 +87,8 @@ public class LiskovSubstitutionPrincipleSamples {
 
     public static void calculateSquareArea() {
         int height = 2, width = 2;
-        Square rectangle = new Square(height, width);
-        int area = rectangle.area();
+        Square square = new Square(height, width);
+        int area = square.area();
         System.out.println("The square's area is: " + area);
         Assert.isTrue(area == 4, "The calculated area is wrong!");
     }
@@ -105,11 +105,11 @@ public class LiskovSubstitutionPrincipleSamples {
 
     public static void enlargeSquare() {
         int height = 2, width = 2;
-        Square rectangle = new Square(height, width);
-        int area = rectangle.area();
-        rectangle.setHeight(rectangle.getHeight() + 2);
+        Square square = new Square(height, width);
+        int area = square.area();
+        square.setHeight(square.getHeight() + 2);
         System.out.println("The square's height increases by 2.");
-        int enlargedArea = rectangle.area();
+        int enlargedArea = square.area();
         Assert.isTrue(enlargedArea > area, "Error occurred!");
     }
 

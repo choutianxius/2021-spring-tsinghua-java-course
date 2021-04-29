@@ -1,3 +1,5 @@
+package com.octopusthu.javaengineering.samples;
+
 /**
  * 接口、类与方法的继承举例，用于演示 IntelliJ IDEA 的 Navigate 功能。
  *
