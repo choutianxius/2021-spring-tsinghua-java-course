@@ -18,21 +18,33 @@ import java.util.Map;
 public class InMemoryPlayerServiceImpl implements PlayerService {
     private final Map<Integer, Player> players = new HashMap<>();
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void createPlayer(Integer id, String name) throws DomainObjectException {
         players.put(id, new Player(id, name));
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void removePlayer(Integer id) throws DomainObjectException {
         players.remove(id);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Player getPlayer(Integer id) throws DomainObjectException {
         return players.get(id);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public List<Player> getAllPlayers() {
         return List.copyOf(players.values());

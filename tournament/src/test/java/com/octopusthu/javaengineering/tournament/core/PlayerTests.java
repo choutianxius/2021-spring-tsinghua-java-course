@@ -1,11 +1,20 @@
-package com.octopusthu.javaengineering.tournament.tba.core;
+package com.octopusthu.javaengineering.tournament.core;
 
-import com.octopusthu.javaengineering.tournament.core.Player;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class PlayerTests {
+
+    @Test
+    void constructorThenOk() {
+        int id = 1;
+        String name = "张三";
+        Player player = new Player(id, name);
+        assertEquals(id, player.getId());
+        assertEquals(name, player.getName());
+    }
 
     @Test
     void whenIdIsNullThenException() {
