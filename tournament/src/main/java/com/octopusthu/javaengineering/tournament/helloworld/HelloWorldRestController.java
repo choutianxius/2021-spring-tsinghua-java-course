@@ -1,4 +1,4 @@
-package com.octopusthu.javaengineering.tournament.web;
+package com.octopusthu.javaengineering.tournament.helloworld;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

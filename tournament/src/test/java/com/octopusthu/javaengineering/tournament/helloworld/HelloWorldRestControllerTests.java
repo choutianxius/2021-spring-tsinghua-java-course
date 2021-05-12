@@ -1,4 +1,4 @@
-package com.octopusthu.javaengineering.tournament.web;
+package com.octopusthu.javaengineering.tournament.helloworld;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
