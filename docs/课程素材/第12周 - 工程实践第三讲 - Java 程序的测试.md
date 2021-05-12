@@ -22,7 +22,7 @@
 
 1. 拉取课程 git 仓库 master 分支的最新代码，基于 master 分支新建一个以 user/xxx 命名的分支，使用该分支完成本次和今后的课后练习（大作业）。
 
-1. 完成 "tournament" 项目的测试类中标记了 `TODO` 的单元测试方法。
+1. 完成 "tournament" 项目的 InMemoryPlayerServiceImplTests 测试类中标记了 `TODO` 的单元测试方法。
 
 1. 在 java-engineering-root 项目中新建一个与 "tournament" 并列的子模块，作为自己的大作业项目。
 

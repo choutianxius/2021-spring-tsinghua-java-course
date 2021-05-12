@@ -23,7 +23,14 @@ public class InMemoryPlayerServiceImpl implements PlayerService {
      */
     @Override
     public void createPlayer(Integer id, String name) throws DomainObjectException {
-        players.put(id, new Player(id, name));
+        if (players.get(id) != null) {
+            throw new DomainObjectException("duplicate id: " + id);
+        }
+        try {
+            players.put(id, new Player(id, name));
+        } catch (IllegalArgumentException e) {
+            throw new DomainObjectException(e);
+        }
     }
 
     /**
