@@ -4,7 +4,7 @@
 
 CREATE TABLE `team`
 (
-    `seq`  int(9) NOT NULL COMMENT '球队ID',
+    `seq`  int NOT NULL COMMENT '球队ID',
     `name` varchar(50) NOT NULL COMMENT '球队名称',
     PRIMARY KEY (`seq`)
 ) COMMENT = '球队';
@@ -14,7 +14,7 @@ CREATE TABLE `team`
 -- ----------------------------
 CREATE TABLE `player`
 (
-    `seq`  int(9) NOT NULL COMMENT '球员ID',
+    `seq`  int NOT NULL COMMENT '球员ID',
     `name` varchar(50) NOT NULL COMMENT '球员姓名',
     PRIMARY KEY (`seq`)
 ) COMMENT = '球员';
@@ -24,14 +24,14 @@ CREATE TABLE `player`
 -- ----------------------------
 CREATE TABLE `fixture`
 (
-    `seq`             int(9) NOT NULL COMMENT '比赛ID',
+    `seq`             int NOT NULL COMMENT '比赛ID',
     `fixture_date`    date COMMENT '比赛日期',
     `kickoff_time`    time(0) COMMENT '比赛开始时间',
     `field`           varchar(50) COMMENT '比赛场地',
-    `home_team`       int(9) COMMENT '主队',
-    `away_team`       int(9) COMMENT '客队',
-    `home_team_score` int(3) COMMENT '主队得分',
-    `away_team_score` int(3) COMMENT '客队得分',
+    `home_team`       int COMMENT '主队',
+    `away_team`       int COMMENT '客队',
+    `home_team_score` int COMMENT '主队得分',
+    `away_team_score` int COMMENT '客队得分',
     PRIMARY KEY (`seq`),
     INDEX             `fk__fixture__home_team` (`home_team`) USING BTREE,
     INDEX             `fk__fixture__away_team` (`away_team`) USING BTREE,
@@ -44,12 +44,12 @@ CREATE TABLE `fixture`
 -- ----------------------------
 CREATE TABLE `fixture_event`
 (
-    `seq`                 int(9) NOT NULL COMMENT '事件ID',
-    `fixture`             int(9) NOT NULL COMMENT '比赛',
+    `seq`                 int NOT NULL COMMENT '事件ID',
+    `fixture`             int NOT NULL COMMENT '比赛',
     `event`               varchar(10) NOT NULL COMMENT '事件类型。G: 进球; OG: 乌龙球; YC: 黄牌; RC: 红牌。',
-    `event_minute_offset` int(3) COMMENT '事件发生时间，按比赛开始后第几分钟记录。比如：比赛第30分钟发生的事件，本列存储整数30。',
-    `team`                int(9) COMMENT '事件涉及的球队，其含义随事件类型的不同而不同。',
-    `player`              int(9) COMMENT '事件涉及的球员，其含义随事件类型的不同而不同。',
+    `event_minute_offset` int COMMENT '事件发生时间，按比赛开始后第几分钟记录。比如：比赛第30分钟发生的事件，本列存储整数30。',
+    `team`                int COMMENT '事件涉及的球队，其含义随事件类型的不同而不同。',
+    `player`              int COMMENT '事件涉及的球员，其含义随事件类型的不同而不同。',
     PRIMARY KEY (`seq`),
     INDEX                 `fk__fixture_event__fixture` (`fixture`) USING BTREE,
     INDEX                 `fk__team` (`team`) USING BTREE,

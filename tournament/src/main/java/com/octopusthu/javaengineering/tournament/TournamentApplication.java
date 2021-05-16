@@ -1,13 +1,11 @@
 package com.octopusthu.javaengineering.tournament;
 
+import com.octopusthu.javaengineering.tournament.database.JdbcPlayerServiceImpl;
 import com.octopusthu.javaengineering.tournament.helloworld.HelloWorldRestController;
 import com.octopusthu.javaengineering.tournament.inmemory.InMemoryPlayerServiceImpl;
-import com.octopusthu.javaengineering.tournament.database.JdbcPlayerServiceImpl;
 import com.octopusthu.javaengineering.tournament.web.PlayerRestController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 
 /**
@@ -15,9 +13,7 @@ import org.springframework.context.annotation.ComponentScan;
  *
  * @author octopusthu@gmail.com
  */
-@SpringBootApplication(exclude = {
-    DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class
-})
+@SpringBootApplication
 @ComponentScan(basePackageClasses = {
     InMemoryPlayerServiceImpl.class,
     JdbcPlayerServiceImpl.class,
