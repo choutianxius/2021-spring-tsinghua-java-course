@@ -33,7 +33,7 @@ public interface PlayerService {
      *
      * @param id 球员 ID
      * @return 根据 <code>id</code> 查询到的球员，不为 <code>null</code> 。
-     * @throws DomainObjectException 如果根据 <code>id</code> 找不到球员
+     * @throws DomainObjectException 如果根据 <code>id</code> 找不到球员，或找到多名球员
      */
     Player getPlayer(Integer id) throws DomainObjectException;
 

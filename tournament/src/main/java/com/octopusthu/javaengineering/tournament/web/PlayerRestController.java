@@ -2,6 +2,7 @@ package com.octopusthu.javaengineering.tournament.web;
 
 import com.octopusthu.javaengineering.tournament.core.Player;
 import com.octopusthu.javaengineering.tournament.core.PlayerService;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.List;
 public class PlayerRestController {
     private final PlayerService service;
 
-    public PlayerRestController(PlayerService service) {
+    public PlayerRestController(@Qualifier("jdbcPlayerServiceImpl") PlayerService service) {
         this.service = service;
     }
 
