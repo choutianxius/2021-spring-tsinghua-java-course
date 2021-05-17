@@ -1,6 +1,7 @@
 package com.octopusthu.javaengineering.tournament.tba.database;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.octopusthu.javaengineering.tournament.jpa.PlayerEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

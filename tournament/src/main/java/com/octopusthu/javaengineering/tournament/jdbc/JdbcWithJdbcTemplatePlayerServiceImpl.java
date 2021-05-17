@@ -1,4 +1,4 @@
-package com.octopusthu.javaengineering.tournament.database;
+package com.octopusthu.javaengineering.tournament.jdbc;
 
 import com.octopusthu.javaengineering.tournament.common.exception.DomainObjectException;
 import com.octopusthu.javaengineering.tournament.core.Player;
