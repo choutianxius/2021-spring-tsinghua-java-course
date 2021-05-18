@@ -38,6 +38,9 @@ public class InMemoryPlayerServiceImpl implements PlayerService {
      */
     @Override
     public void removePlayer(Integer id) throws DomainObjectException {
+        if(id == null) {
+            throw new DomainObjectException("ID can't be null");
+        }
         players.remove(id);
     }
 
@@ -46,6 +49,9 @@ public class InMemoryPlayerServiceImpl implements PlayerService {
      */
     @Override
     public Player getPlayer(Integer id) throws DomainObjectException {
+        if(id == null) {
+            throw new DomainObjectException("ID can't be null");
+        }
         return players.get(id);
     }
 

@@ -58,10 +58,10 @@ class InMemoryPlayerServiceImplTests {
         service.removePlayer(2);
     }
 
-//    @Test
-//    void removePlayerWhenIdIsNullThenThrowsDomainObjectException() {
-//        assertThrows(DomainObjectException.class, () -> service.removePlayer(null));
-//    }
+    @Test
+    void removePlayerWhenIdIsNullThenThrowsDomainObjectException() {
+        assertThrows(DomainObjectException.class, () -> service.removePlayer(null));
+    }
 
     @Test
     void getPlayerThenOk() {
@@ -69,10 +69,10 @@ class InMemoryPlayerServiceImplTests {
         service.getPlayer(2);
     }
 
-//    @Test
-//    void getPlayerWhenIdIsNullThenThrowsDomainObjectException() {
-//        assertThrows(DomainObjectException.class, () -> service.getPlayer(null));
-//    }
+    @Test
+    void getPlayerWhenIdIsNullThenThrowsDomainObjectException() {
+        assertThrows(DomainObjectException.class, () -> service.getPlayer(null));
+    }
 
 
     @Test
