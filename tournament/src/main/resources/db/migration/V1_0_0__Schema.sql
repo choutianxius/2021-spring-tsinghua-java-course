@@ -33,7 +33,8 @@ CREATE TABLE `team_member`
     INDEX `fk__team_member__team` (`team`) USING BTREE,
     INDEX `fk__team_member__player` (`player`) USING BTREE,
     CONSTRAINT `fk__team_member__team` FOREIGN KEY (`team`) REFERENCES `team` (`seq`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-    CONSTRAINT `fk__team_member__player` FOREIGN KEY (`player`) REFERENCES `player` (`seq`) ON DELETE RESTRICT ON UPDATE RESTRICT
+    CONSTRAINT `fk__team_member__player` FOREIGN KEY (`player`) REFERENCES `player` (`seq`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+    CONSTRAINT `uc__team_member__team__squad_number` UNIQUE (`team`, `squad_number`)
 ) COMMENT = '比赛过程发生的详细事件，比如进球、红黄牌等。';
 
 -- ----------------------------

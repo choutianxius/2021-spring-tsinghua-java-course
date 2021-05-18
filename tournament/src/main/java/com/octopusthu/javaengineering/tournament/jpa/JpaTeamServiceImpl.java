@@ -25,9 +25,9 @@ public class JpaTeamServiceImpl implements TeamService {
         this.playerRepository = playerRepository;
     }
 
-    @Transactional(rollbackFor = {
-        Exception.class
-    })
+//    @Transactional(rollbackFor = {
+//        Exception.class
+//    })
     @Override
     public void createTeam(Integer id, String name, TeamMember... members) throws DomainObjectException {
         final TeamEntity teamEntity = repository.save(new TeamEntity(id, name, null));

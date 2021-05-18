@@ -24,12 +24,12 @@ public class JdbcWithJdbcTemplatePlayerServiceImpl implements PlayerService {
 
     @Override
     public void createPlayer(Integer id, String name) throws DomainObjectException {
-
+        jdbcTemplate.update("insert into player(seq,name) values (?,?)", id, name);
     }
 
     @Override
     public void removePlayer(Integer id) throws DomainObjectException {
-
+        jdbcTemplate.update("delete from player where seq=?", id);
     }
 
     @Override

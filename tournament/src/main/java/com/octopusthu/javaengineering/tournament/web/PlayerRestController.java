@@ -17,7 +17,7 @@ import java.util.List;
 public class PlayerRestController {
     private final PlayerService service;
 
-    public PlayerRestController(@Qualifier("jpaPlayerServiceImpl") PlayerService service) {
+    public PlayerRestController(@Qualifier("jdbcWithJdbcTemplatePlayerServiceImpl") PlayerService service) {
         this.service = service;
     }
 
