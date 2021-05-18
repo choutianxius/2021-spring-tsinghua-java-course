@@ -2,6 +2,7 @@ package com.octopusthu.javaengineering.tournament.tba.database;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.octopusthu.javaengineering.tournament.jpa.PlayerEntity;
+import com.octopusthu.javaengineering.tournament.jpa.TeamEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,6 +20,7 @@ import javax.persistence.*;
 public class FixtureEventEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private Integer seq;
 

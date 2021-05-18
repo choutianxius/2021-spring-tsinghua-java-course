@@ -1,5 +1,6 @@
 package com.octopusthu.javaengineering.tournament.tba.database;
 
+import com.octopusthu.javaengineering.tournament.jpa.TeamEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,6 +21,7 @@ import java.util.List;
 public class FixtureEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private Integer seq;
 

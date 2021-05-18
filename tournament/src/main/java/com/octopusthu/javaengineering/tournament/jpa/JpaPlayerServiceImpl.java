@@ -30,11 +30,21 @@ public class JpaPlayerServiceImpl implements PlayerService {
         repository.save(new PlayerEntity(id, name));
     }
 
+    /**
+     * {@inheritDoc}
+     * <p>
+     * TODO: find bug(s)
+     */
     @Override
     public void removePlayer(Integer id) throws DomainObjectException {
         repository.deleteById(id);
     }
 
+    /**
+     * {@inheritDoc}
+     * <p>
+     * TODO: find bug(s)
+     */
     @Override
     public Player getPlayer(Integer id) throws DomainObjectException {
         return convert(repository.getOne(id));

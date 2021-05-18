@@ -2,11 +2,16 @@ package com.octopusthu.javaengineering.tournament.tba.database;
 
 import com.octopusthu.javaengineering.tournament.core.Player;
 import com.octopusthu.javaengineering.tournament.jpa.PlayerEntity;
-import com.octopusthu.javaengineering.tournament.tba.core.*;
+import com.octopusthu.javaengineering.tournament.jpa.TeamEntity;
+import com.octopusthu.javaengineering.tournament.tba.core.Fixture;
+import com.octopusthu.javaengineering.tournament.tba.core.FixtureEvent;
+import com.octopusthu.javaengineering.tournament.tba.core.FixtureService;
+import com.octopusthu.javaengineering.tournament.tba.core.Team;
 import org.springframework.data.domain.Sort;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Transactional
@@ -71,7 +76,7 @@ public class FixtureServiceImpl implements FixtureService {
     }
 
     protected TeamEntity convert(Team team) {
-        return new TeamEntity(team.getId(), team.getName());
+        return new TeamEntity(team.getId(), team.getName(), Collections.emptyList());
     }
 
     protected PlayerEntity convert(Player player) {
