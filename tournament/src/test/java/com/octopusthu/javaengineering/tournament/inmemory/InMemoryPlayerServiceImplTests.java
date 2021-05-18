@@ -56,21 +56,35 @@ class InMemoryPlayerServiceImplTests {
      */
     @Test
     void removePlayerThenOk() {
+        service.createPlayer(2,"a");
+        service.removePlayer(2);
     }
+
+//    @Test
+//    void removePlayerWhenIdIsNullThenThrowsDomainObjectException() {
+//        assertThrows(DomainObjectException.class, () -> service.removePlayer(null));
+//    }
 
     /**
      * TODO
      */
     @Test
     void getPlayerThenOk() {
+        service.createPlayer(2,"b");
+        service.getPlayer(2);
     }
 
+//    @Test
+//    void getPlayerWhenIdIsNullThenThrowsDomainObjectException() {
+//        assertThrows(DomainObjectException.class, () -> service.getPlayer(null));
+//    }
 
     /**
      * TODO
      */
     @Test
     void getAllPlayersThenOk() {
+        service.getAllPlayers();
     }
 
 }
