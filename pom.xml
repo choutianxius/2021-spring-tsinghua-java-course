@@ -14,7 +14,7 @@
         <module>hello-world</module>
         <module>code-samples</module>
         <module>tournament</module>
-        <module>LibaryAssistant</module>
+        <module>LibraryAssistant</module>
     </modules>
 
 </project>
