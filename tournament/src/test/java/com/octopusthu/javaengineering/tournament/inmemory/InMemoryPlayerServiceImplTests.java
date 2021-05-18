@@ -51,9 +51,7 @@ class InMemoryPlayerServiceImplTests {
         assertThrows(DomainObjectException.class, () -> service.createPlayer(1, "李四"));
     }
 
-    /**
-     * TODO
-     */
+
     @Test
     void removePlayerThenOk() {
         service.createPlayer(2,"a");
@@ -65,9 +63,6 @@ class InMemoryPlayerServiceImplTests {
 //        assertThrows(DomainObjectException.class, () -> service.removePlayer(null));
 //    }
 
-    /**
-     * TODO
-     */
     @Test
     void getPlayerThenOk() {
         service.createPlayer(2,"b");
@@ -79,9 +74,7 @@ class InMemoryPlayerServiceImplTests {
 //        assertThrows(DomainObjectException.class, () -> service.getPlayer(null));
 //    }
 
-    /**
-     * TODO
-     */
+
     @Test
     void getAllPlayersThenOk() {
         service.getAllPlayers();
