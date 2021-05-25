@@ -10,14 +10,14 @@ import java.util.List;
 /**
  * "队员"领域实体 Controller
  *
- * @author octopusthu@gmail.com
+ * @author choutianxius@gmail.com
  */
 @RestController
 @RequestMapping("/assistant")
 public class AssistantRestController {
     private final AssistantService service;
 
-    public AssistantRestController(@Qualifier("inMemoryAssistantServiceImpl") AssistantService service) {
+    public AssistantRestController(@Qualifier("jdbcWithJdbcTemplateAssistantServiceImpl") AssistantService service) {
         this.service = service;
     }
 
@@ -37,8 +37,8 @@ public class AssistantRestController {
     }
 
     @GetMapping("/list")
-    public List<Assistant> list() {
-        return service.getAllAssistants();
+        public List<Assistant> list() {
+            return service.getAllAssistants();
     }
 
 }

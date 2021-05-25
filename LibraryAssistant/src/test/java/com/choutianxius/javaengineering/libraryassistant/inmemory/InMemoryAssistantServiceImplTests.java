@@ -80,9 +80,4 @@ class InMemoryAssistantServiceImplTests {
         service.getAllAssistants();
     }
 
-    @Test
-    void getPhoneThenOk() {
-        service.createAssistant(1, "张三", "17300000000");
-        service.getPhone(1);
-    }
 }
