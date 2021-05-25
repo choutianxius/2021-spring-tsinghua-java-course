@@ -4,7 +4,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
-import org.springframework.context.annotation.Bean;
 
 /**
  * @author octopusthu@gmail.com
@@ -16,17 +15,17 @@ public class JakartaEeSampleApplication {
         SpringApplication.run(JakartaEeSampleApplication.class, args);
     }
 
-    @Bean
+//    @Bean
     public ServletRegistrationBean<HelloWorldServlet> helloWorldServlet() {
         return new ServletRegistrationBean<>(new HelloWorldServlet(), "/hello/1");
     }
 
-    @Bean
+//    @Bean
     public ServletRegistrationBean<HelloWorldHttpServlet> helloWorldHttpServlet() {
         return new ServletRegistrationBean<>(new HelloWorldHttpServlet(), "/hello/2");
     }
 
-    @Bean
+//    @Bean
     public FilterRegistrationBean<SampleLoginFilter> sampleLoginFilter() {
         FilterRegistrationBean<SampleLoginFilter> registrationBean = new FilterRegistrationBean<>();
         SampleLoginFilter filter = new SampleLoginFilter();
@@ -35,7 +34,7 @@ public class JakartaEeSampleApplication {
         return registrationBean;
     }
 
-    @Bean
+//    @Bean
     public FilterRegistrationBean<SampleAccessControlFilter> sampleAccessControlFilter() {
         FilterRegistrationBean<SampleAccessControlFilter> registrationBean = new FilterRegistrationBean<>();
         SampleAccessControlFilter filter = new SampleAccessControlFilter();
