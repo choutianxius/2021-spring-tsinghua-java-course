@@ -35,4 +35,14 @@ public class PlayerTests {
     void whenNameIsBlankThenException() {
         assertThrows(Exception.class, () -> new Player(1, " "));
     }
+
+    @Test
+    void getIDThenOK(){
+        assertEquals(1, new Player(1, "Bob").getId());
+    }
+
+    @Test
+    void getNameThenOK(){
+        assertEquals("Bob", new Player(1, "Bob").getName());
+    }
 }

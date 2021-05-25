@@ -22,4 +22,15 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
+    <!-- Spring Boot 未定义的依赖 -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>4.4</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 </project>

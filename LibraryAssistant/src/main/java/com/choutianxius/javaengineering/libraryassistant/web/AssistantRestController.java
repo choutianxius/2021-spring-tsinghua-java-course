@@ -2,12 +2,13 @@ package com.choutianxius.javaengineering.libraryassistant.web;
 
 import com.choutianxius.javaengineering.libraryassistant.core.Assistant;
 import com.choutianxius.javaengineering.libraryassistant.core.AssistantService;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 /**
- * "球员"领域实体 Controller
+ * "队员"领域实体 Controller
  *
  * @author octopusthu@gmail.com
  */
@@ -16,7 +17,7 @@ import java.util.List;
 public class AssistantRestController {
     private final AssistantService service;
 
-    public AssistantRestController(AssistantService service) {
+    public AssistantRestController(@Qualifier("inMemoryAssistantServiceImpl") AssistantService service) {
         this.service = service;
     }
 

@@ -3,6 +3,7 @@ package com.choutianxius.javaengineering.libraryassistant.inmemory;
 import com.choutianxius.javaengineering.libraryassistant.common.exception.DomainObjectException;
 import com.choutianxius.javaengineering.libraryassistant.core.Assistant;
 import com.choutianxius.javaengineering.libraryassistant.core.AssistantService;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -15,6 +16,7 @@ import java.util.Map;
  * @author octopusthu@gmail.com
  */
 @Service
+//@Qualifier("InMemoryAssistantServiceImpl")
 public class InMemoryAssistantServiceImpl implements AssistantService {
     private final Map<Integer, Assistant> assistants = new HashMap<>();
 

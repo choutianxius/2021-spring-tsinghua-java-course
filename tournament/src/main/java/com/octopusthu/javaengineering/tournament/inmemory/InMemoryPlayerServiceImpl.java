@@ -24,11 +24,11 @@ public class InMemoryPlayerServiceImpl implements PlayerService {
     @Override
     public void createPlayer(Integer id, String name) throws DomainObjectException {
         if (players.get(id) != null) {
-            throw new DomainObjectException("duplicate id: " + id);
+            throw new DomainObjectException("duplicate player id: " + id);
         }
         try {
             players.put(id, new Player(id, name));
-        } catch (IllegalArgumentException e) {
+        } catch (Exception e) {
             throw new DomainObjectException(e);
         }
     }
@@ -38,10 +38,21 @@ public class InMemoryPlayerServiceImpl implements PlayerService {
      */
     @Override
     public void removePlayer(Integer id) throws DomainObjectException {
+
         if(id == null) {
             throw new DomainObjectException("ID can't be null");
         }
         players.remove(id);
+
+        if (players.get(id) == null) {
+            throw new DomainObjectException("Nonexistent player id: " + id);
+        }
+        try {
+            players.remove(id);
+        } catch (Exception e) {
+            throw new DomainObjectException(e);
+        }
+
     }
 
     /**
@@ -49,10 +60,20 @@ public class InMemoryPlayerServiceImpl implements PlayerService {
      */
     @Override
     public Player getPlayer(Integer id) throws DomainObjectException {
+
         if(id == null) {
             throw new DomainObjectException("ID can't be null");
         }
-        return players.get(id);
+        Player player;
+        try {
+            player = players.get(id);
+        } catch (Exception e) {
+            throw new DomainObjectException(e);
+        }
+        if (player == null) {
+            throw new DomainObjectException("Nonexistent player id: " + id);
+        }
+        return player;
     }
 
     /**
