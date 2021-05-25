@@ -17,9 +17,7 @@ public class AssistantTests {
         assertEquals(id, assistant.getId());
         assertEquals(name, assistant.getName());
         assertEquals(phone,assistant.getPhone());
-        assertEquals("freshman", assistant.getRank());
-        assertEquals(0d, assistant.getCurrentHours());
-        assertEquals(0d, assistant.getTotalHours());
+        //assertEquals("freshman", assistant.getRank());
     }
 
     @Test
@@ -74,33 +72,14 @@ public class AssistantTests {
         assertEquals("17355800000", assistant.getPhone());
     }
 
-    @Test
-    void getterRankThenOk() {new Assistant(1, testname, testphone).getRank();}
+    /**@Test
+    void getterRankThenOk() {new Assistant(1, testname, testphone).getRank();}*/
 
-    @Test
+    /**@Test
     void setterRankThenOk() {
         Assistant assistant = new Assistant(1, testname, testphone);
         assistant.setRank("skilled");
         assertEquals("skilled", assistant.getRank());
     }
-
-    @Test
-    void getterCHThenOk() {assertEquals(0d, new Assistant(1, testname, testphone).getTotalHours());}
-
-    @Test
-    void setterCHThenOk() {
-        Assistant assistant = new Assistant(1, testname, testphone);
-        assistant.setCurrentHours(30d);
-        assertEquals(30d, assistant.getCurrentHours());
-    }
-
-    @Test
-    void getterTHThenOk() {assertEquals(0d, new Assistant(1, testname, testphone).getTotalHours());}
-
-    @Test
-    void setterTHThenOk() {
-        Assistant assistant = new Assistant(1, testname, testphone);
-        assistant.setTotalHours(30d);
-        assertEquals(30d, assistant.getTotalHours());
-    }
+    */
 }

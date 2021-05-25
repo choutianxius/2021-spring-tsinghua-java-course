@@ -10,7 +10,7 @@ import org.springframework.util.Assert;
  *
  * @author octopusthu@gmail.com
  */
-    public class Assistant {
+public class Assistant {
 
     /**
      * 助理队员 ID
@@ -32,42 +32,28 @@ import org.springframework.util.Assert;
     private String phone;
 
     /**
-     *  队员等级，freshman, skilled, manager, boss
+     *  队员等级，freshman, skilled, captain, boss
      */
-    @Getter
-    @Setter
-    private String rank;
-
-    /**
-     *  总工时
-     */
-    @Getter
-    @Setter
-    private Double TotalHours;
-
-    /**
-     *  本周工时
-     */
-    @Getter
-    @Setter
-    private Double CurrentHours;
+    //@Getter
+    //private EnumClass.Rank rank;
 
     public Assistant(Integer id, String name, String phone) {
-        Assert.notNull(id, "id cannot be null");
         /**
-         * 暂时不考虑name和phone的格式问题
+         * 学号和姓名不能为空
          */
+        Assert.notNull(id, "id cannot be null");
         Assert.isTrue(StringUtils.isNotBlank(name), "name cannot be blank");
-        Assert.isTrue(StringUtils.isNotBlank(phone), "phone cannot be blank");
         this.id = id;
         this.name = name;
         this.phone = phone;
         /**
          * 新队员只能是freshman
          */
-        this.rank = "freshman";
-        this.TotalHours = 0d;
-        this.CurrentHours = 0d;
+        //this.rank = EnumClass.Rank.freshman;
+    }
+
+    public Assistant(Integer id, String name) {
+        this(id, name, null);
     }
 
 }

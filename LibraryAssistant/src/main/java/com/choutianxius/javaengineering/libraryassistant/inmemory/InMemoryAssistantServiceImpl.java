@@ -3,7 +3,6 @@ package com.choutianxius.javaengineering.libraryassistant.inmemory;
 import com.choutianxius.javaengineering.libraryassistant.common.exception.DomainObjectException;
 import com.choutianxius.javaengineering.libraryassistant.core.Assistant;
 import com.choutianxius.javaengineering.libraryassistant.core.AssistantService;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -66,8 +65,8 @@ public class InMemoryAssistantServiceImpl implements AssistantService {
     }
 
     /**
-     * {@inheritDoc}
-     */
     @Override
-    public String getPhone(Integer id) {return assistants.get(id).getPhone();}
+    public List<Assistant> getRankedAssistants(AssistantRank.Rank rank) {
+
+    }*/
 }
