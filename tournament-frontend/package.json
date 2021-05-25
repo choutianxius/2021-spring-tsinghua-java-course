@@ -1,0 +1,14 @@
+{
+  "name": "tournament-frontend",
+  "version": "1.0.0",
+  "description": "院系足球比赛管理系统 - 前端程序",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "octopusthu@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
