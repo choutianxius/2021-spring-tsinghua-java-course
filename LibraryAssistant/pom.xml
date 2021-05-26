@@ -12,7 +12,7 @@
 
     <artifactId>LibraryAssistant</artifactId>
     <version>1.0.0</version>
-    <description>图书馆助理分队工作考评系统</description>
+    <description>图书馆助理工作系统</description>
 
     <dependencies>
 
@@ -68,6 +68,10 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
         </dependency>
 
     </dependencies>

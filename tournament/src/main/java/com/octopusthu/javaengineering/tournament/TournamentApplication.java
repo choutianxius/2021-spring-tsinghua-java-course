@@ -18,9 +18,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
  *
  * @author octopusthu@gmail.com
  */
-@SpringBootApplication(exclude = {
-    DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class
-})
+@SpringBootApplication
 @ComponentScan(basePackageClasses = {
     InMemoryPlayerServiceImpl.class,
     JdbcPlayerServiceImpl.class,
