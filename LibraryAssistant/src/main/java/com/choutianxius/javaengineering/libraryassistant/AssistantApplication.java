@@ -7,6 +7,7 @@ import com.choutianxius.javaengineering.libraryassistant.web.AssistantRestContro
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 /**
  * Spring Boot 启动程序
@@ -20,6 +21,7 @@ import org.springframework.context.annotation.ComponentScan;
     AssistantRestController.class,
     HelloWorldRestController.class
 })
+@EnableJpaRepositories(basePackageClasses = AssistantRepository.class)
 public class AssistantApplication {
 
     public static void main(String[] args) {
